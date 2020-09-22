@@ -39,7 +39,7 @@ export default class Form extends Component {
       <KeyboardAvoidingView style={styles.container}>
       <View style={styles.passwordContainer}>
       <UserInput
-          onChangeText={text => {window.things.login.email = text}}
+          onChangeText={text => {text}}
           source={usernameImg}
           placeholder="Email"
           autoCapitalize={'none'}
@@ -48,6 +48,7 @@ export default class Form extends Component {
         /></View>
         <View style={styles.passwordContainer}>
         <UserInput
+          onChangeText={text => {text}}
           source={passwordImg}
           secureTextEntry={this.state.showPass}
           placeholder="Password"
